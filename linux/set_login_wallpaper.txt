@@ -1,0 +1,19 @@
+# Copy image to shared backgrounds
+sudo cp <image-path> /usr/share/backgrounds/
+
+# Open config file
+sudo gedit /etc/alternatives/gdm3.css
+
+# Search for the following block
+
+#lockDialogGroup {
+  background: #2c001e url(resource:///org/gnome/shell/theme/noise-texture.png);
+  background-repeat: repeat; }
+
+# Override it
+
+#lockDialogGroup {
+  background: #2c001e url(file:///usr/share/backgrounds/<image-name>);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }

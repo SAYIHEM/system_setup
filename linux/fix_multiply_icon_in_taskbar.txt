@@ -1,0 +1,15 @@
+# Run following command and click with the cursor on the application you want to fix
+
+xprop WM_CLASS
+
+
+# Output in terminal could be something like that:
+
+WM_CLASS(STRING) = "gedit", "Gedit"
+
+
+# Copy the second string (in this case 'Gedit') 
+
+# In the <application>.desktop add the following line
+
+StartupWMClass=<copied_string>

@@ -1,0 +1,18 @@
+Fix Raspberry locale error - Run this commands:
+
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+locale-gen en_US.UTF-8
+dpkg-reconfigure locales
+
+
+
+
+Edit /etc/locale.gen and uncomment the line with en_US.UTF-8
+Run locale-gen en_US.UTF-8
+Run update-locale en_US.UTF-8
+
+Put this in /etc/default/locale
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8

@@ -1,0 +1,8 @@
+# Mount options to mount as user
+exec,users,locale=en_US.UTF-8,permissions, auto 0 0,x-gvfs-show,rw
+
+# Change folder permissions
+sudo chown -R <user>:<user> <directory>
+
+# Fix read-only bug
+sudo ntfsfix /dev/<partition>

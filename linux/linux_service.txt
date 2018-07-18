@@ -1,0 +1,21 @@
+
+--- Service structure
+[Unit]
+Description = making network connection up
+After = network.target
+[Service]
+ExecStart = <executable.sh>
+[Install]
+WantedBy = multi-user.target
+
+--- Installing service (bash script) on Linux ---
+sudo cp <service> /etc/systemd/system/<service>
+sudo chmod +x /etc/systemd/system/<service>
+sudo systemctl enable <service>
+
+
++++++ OUTDATED +++++
+--- Installing service (bash script) on Linux ---
+sudo cp <service> /etc/init.d/<service>
+sudo chmod +x /etc/init.d/<service>
+sudo systemctl enable <service>

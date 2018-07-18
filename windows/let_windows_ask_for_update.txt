@@ -1,0 +1,7 @@
+# Let Windows ask for update!
+
+1. Create new key 'WindowsUpdate' in 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows'
+
+2. Create new key 'AU' in 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate'
+
+3. In key 'AU' create new DWORD (32-bit) Value with name 'AUOptions' and set its value to '2'
